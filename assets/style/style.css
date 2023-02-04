@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  font-family: "League Spartan", sans-serif;
+}
+
+.main-content {
+  margin: 0 auto;
+}
+
+.container {
+  width: 450px;
+  margin: 2em auto;
+}
+
+
+/* Header */
+
+.content-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.content-head h1 {
+  font-size: 45px;
+}
+
+.theme-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+}
+
+.theme-content .theme-toggle {
+  background-color: hsl(223, 31%, 20%);
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  margin-left: 25px;
+  padding: 5px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-content .theme-toggle .toggle-btn {
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+
+.theme-content .theme-items {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+}
+
+
+/* Calculate Screen */
+
+.calculate-screen {
+  background-color: hsl(224, 36%, 15%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding: 30px; */
+  height: 100px;
+  padding-right: 30px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.calculate-screen div {
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* Calculate Keypad */
+
+.calculate-keypad {
+  background-color: hsl(223, 31%, 20%);
+  border: none;
+  border-radius: 7px;
+  margin-top: 20px;
+  padding: 20px 25px;
+}
+
+.calculate-keypad .key-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.calculate-keypad .key-items .key-item {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+
+.key-item:active, .key-item-delete:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.calculate-keypad .key-items .key-item-delete {
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(30, 25%, 89%);
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 12px;
+  cursor: pointer;
+}
+
+.key-function {
+  display: flex;
+  flex-direction: row;
+  justify-self: space-between;
+  align-items: center;
+  margin-top: 25px;
+  gap: 25px;
+}
+
+.reset-key, .equals-key {
+  color: hsl(30, 25%, 89%);
+  border-radius: 8px;
+  padding: 12px 8px;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 50%;
+  text-align: center;
+  letter-spacing: .3px;
+  cursor: pointer;
+}
+
+.reset-key {
+  background-color: hsl(225, 21%, 49%);
+  border: none;
+}
+
+.equals-key {
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+}
+
+.equals-key:active, .reset-key:active {
+  transform: translateY(4px);
+}
+
+#theme-2, #theme-3 {
+  background-color: hsl(223, 31%, 20%);
+  cursor: pointer;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+.attribution a {
+  text-decoration: none;
+  padding-left: 5px;
+  color: hsl(0, 4%, 55%);
+}
+
+/* Responsive Design */
+
+@media (max-width: 575px) {
+  .container {
+    width: 350px;
+    margin: 3em auto;
+  }
+
+  .content-head h1 {
+    font-size: 30px;
+  }
+
+  .theme-content {
+    font-size: 12px;
+  }
+
+  .theme-content .theme-toggle {
+    margin-left: 25px;
+    padding: 3px 6px;
+    gap: 5px;
+  }
+
+  .theme-content .theme-toggle .toggle-btn {
+    width: 11px;
+    height: 11px;
+  }
+
+  .theme-content .theme-items {
+    bottom: 20px;
+    left: 70px;
+    gap: 12px;
+  }
+
+  /* Calculate Screen */
+
+  .calculate-screen {
+    /* padding: 30px; */
+    height: 80px;
+    padding-right: 20px;
+  }
+
+  .calculate-screen div {
+    font-size: 35px;
+  }
+
+  /* Calculate Keypad */
+
+  .calculate-keypad .key-items {
+    gap: 15px;
+  }
+
+  .calculate-keypad .key-items .key-item {
+    font-size: 28px;
+    width: 40px;
+    padding: 14px 6px;
+  }
+
+  .calculate-keypad .key-items .key-item-delete {
+    font-size: 23px;
+    width: 40px;
+    padding: 16px 6px;
+  }
+
+  .reset-key, .equals-key {
+    padding: 18px 8px;
+    font-size: 24px;
+    width: 50%;
+  }
+
+  .attribution {
+    font-size: 14px;
+  }
+}
